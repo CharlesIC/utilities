@@ -1,3 +1,5 @@
+// Delete configured projects from a target
+
 import puppeteer from 'puppeteer';
 import path from 'path';
 
@@ -11,11 +13,7 @@ const runTask = async () => {
     });
 
     const page = (await browser.pages())[0];
-
-    await page.setViewport({
-        width: 1450,
-        height: 950,
-    });
+    await page.setViewport({ width: 1450, height: 950 });
 
     await Promise.all([
         page.goto("https://app.snyk.io/org/uktrade/projects", { waitUntil: 'networkidle0' }),

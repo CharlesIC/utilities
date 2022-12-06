@@ -7,7 +7,7 @@
     "node": ">=8"
   },
   "scripts": {
-    "task": "node task.mjs"
+    "task": "node index.js"
   },
   "dependencies": {
     "puppeteer": "^19.3.0"
